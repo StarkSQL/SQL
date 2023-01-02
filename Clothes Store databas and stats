@@ -1,0 +1,19 @@
+--create a database for clothing store
+
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, size INTEGER);
+
+INSERT INTO clothes VALUES (1, "shirt", 2, 4.99,2);
+INSERT INTO clothes VALUES (2, "pants", 4, 20.99, 5);
+INSERT INTO clothes VALUES (3, "jackets", 6, 35.66, 6);
+INSERT INTO clothes VALUES (4, "undies", 2, 3.99, 5);
+INSERT INTO clothes VALUES (5, "socks", 1, 2.99, 9);
+
+
+--display all items in clothing datbas
+SELECT * FROM clothes;
+
+--displays all items from clothes table that are size 2 and up, as well as ordered by asc price tag
+SELECT * FROM clothes WHERE size >2 ORDER BY price ASC;
+
+-- Finally summed up all total of all 15 pieces of items in clothing store
+SELECT SUM(price) FROM clothes
